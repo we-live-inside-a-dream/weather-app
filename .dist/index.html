@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reza's Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kablammo&family=Montserrat:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <h1>Responsive Weather App Powered by the Open Weather A P I</h1>
+      <section id="searchBar" class="searchBar">
+        <form id="searchBar__form" class="searchBar__form" role="search">
+          <label for="searchBar__texrt">Enter a new location</label>
+          <input
+            id="searchBar__text"
+            class="searchBar__text"
+            type="text"
+            role="searchbox"
+            size="40"
+            autocomplete="off"
+            placeholder="City, State, Country"
+          />
+          <button
+            id="searchBar_button"
+            class="searcgBar__button"
+            title="Submit Location"
+            aria-label="Enter Zip Code or City, State, and Country to retrieve weather conditions"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <!-- <i class="fa fa-search"></i> --></i>
+            <i class="fa-solid fa-sync fa-spin"></i>
+          </button>
+        </form>
+      </section>
+      <a href="#currentForcast" class="skip-link">Skip to Current Conditions</a>
+      <section id="currentForcast" class="currentForcast" role="region" aria-labelledby="currentForcast__location">
+        <h2 id="currentForcast__location" class="currentForcast__location">Current Conditions</h2>
+        <div id="currentForcast__conditions" class="currentForcast__conditions"></div>
+      </section>
+      <a href="#dailyForcast" class="skip-link">Skip to Six Day Forecast</a>
+      <nav id="navButtons" class="navButtons">
+        <button id="getLocation" class="button" title="Get Location" aria-label="Get the current weather 
+        conditions for your current location">
+            <i class="fas fa-map-marker-alt"></i>
+            <i class="fa-solid fa-sync fa-spin"></i>
+        </button>
+        <button id="home" class="button" title="Home Weather" aria-label="Get the current weather 
+        conditions for your home location">
+            <i class="fas fa-home"></i>
+            <i class="fa-solid fa-sync fa-spin"></i>
+        </button>
+        <button id="saveLocation" class="button" title="Save Location" aria-label="Save the current weather 
+        conditions as your home location">
+            <i class="fas fa-save"></i>
+            <i class="fa-solid fa-sync fa-spin"></i>
+        </button>
+        <button id="unit" class="button" title="Toggle Measurement Units" aria-label="Toggle between metric and imperial measurement units">
+            <i class="fas fa-chart-bar"></i>
+            <i class="fa-solid fa-sync fa-spin"></i>
+        </button>
+        <button id="refresh" class="button" title="Refresh Weather" aria-label="Refresh the current weather conditions">
+            <i class="fas fa-sync-alt"></i>
+            <i class="fa-solid fa-sync fa-spin"></i>
+        </button>
+      </nav>
+      <hr>
+      <section id="dailyForcast" class="dailyForcast" role="region" aria-labelledby="dailyForcast__title">
+        <h2 id="dailyForcast__title" class="dailyForcast__title">Six Day Forecast</h2>
+        <div id="dailyForcast__contents" class="dailyForcast__contents"></div>
+      </section>
+      <p id="confirmation" class="offscreen" aria-live="assertive"></p>
+    </main>
+  </body>
+</html>
