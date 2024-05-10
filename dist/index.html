@@ -21,10 +21,10 @@
   </head>
   <body>
     <main>
-      <h1>Responsive Weather App Powered by the Open Weather A P I</h1>
+      <h1 class="offscreen">Responsive Weather App Powered by the Open Weather A P I</h1>
       <section id="searchBar" class="searchBar">
         <form id="searchBar__form" class="searchBar__form" role="search">
-          <label for="searchBar__texrt">Enter a new location</label>
+          <label for="searchBar__texrt" class="offscreen">Enter a new location</label>
           <input
             id="searchBar__text"
             class="searchBar__text"
@@ -36,7 +36,7 @@
           />
           <button
             id="searchBar_button"
-            class="searcgBar__button"
+            class="searchBar__button button"
             title="Submit Location"
             aria-label="Enter Zip Code or City, State, and Country to retrieve weather conditions"
           >
@@ -79,7 +79,7 @@
       </nav>
       <hr>
       <section id="dailyForcast" class="dailyForcast" role="region" aria-labelledby="dailyForcast__title">
-        <h2 id="dailyForcast__title" class="dailyForcast__title">Six Day Forecast</h2>
+        <h2 id="dailyForcast__title" class="dailyForcast__title offscreen">Six Day Forecast</h2>
         <div id="dailyForcast__contents" class="dailyForcast__contents"></div>
       </section>
       <p id="confirmation" class="offscreen" aria-live="assertive"></p>
