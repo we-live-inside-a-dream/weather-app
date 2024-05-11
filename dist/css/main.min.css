@@ -107,4 +107,218 @@ hr {
 .button:focus {
   box-shadow: 4px 2px 5px #000;
   border-color: #fff;
+}
+
+.searchBar {
+  padding: 0.5rem 0.5rem 1.5rem;
+}
+.searchBar .searchBar__form {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid lightgray;
+  border-radius: 500px;
+}
+.searchBar .searchBar__form .searchBar__text {
+  flex-grow: 1;
+  border: none;
+  margin-right: 0.25rem;
+  background-color: transparent;
+  color: #fff;
+  width: calc(100% - 52px);
+  font-size: 1.25rem;
+  padding: 0.75rem 0 0.75rem 0.75rem;
+  outline: none;
+}
+.searchBar .searchBar__form .searchBar__text::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.searchBar .searchBar__form .searchBar__button {
+  border: none;
+}
+.searchBar .searchBar__form .searchBar__button i {
+  font-size: 1.7rem;
+}
+.searchBar .searchBar__form .searchBar__button:hover,
+.searchBar .searchBar__form .searBar__button:focus {
+  border: none;
+  box-shadow: none;
+  text-shadow: 4px 2px 5px #000;
+}
+.searchBar .searchBar__form:focus-within,
+.searchBar .searchBar__form:hover {
+  box-shadow: 4px 2px 5px #000;
+}
+
+.navButtons {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5rem 0.25;
+}
+
+.currentForecast .currentForecast__location {
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .currentForecast .currentForecast__location {
+    font-size: 1.3rem;
+  }
+}
+.currentForecast .currentForecast__conditions {
+  width: 100%;
+  font-size: 1.1rem;
+  margin: auto auto 2rem;
+  display: grid;
+}
+@media only screen and (min-width: 375px) {
+  .currentForecast .currentForecast__conditions {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 400px) {
+  .currentForecast .currentForecast__conditions {
+    font-size: 1.7rem;
+  }
+}
+.currentForecast .currentForecast__conditions .temp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: 1/span 3;
+  grid-column: 1/span 2;
+  font-size: 6rem;
+  letter-spacing: 0;
+  text-shadow: 1px 0 5px #000;
+  position: relative;
+}
+@media only screen and (min-width: 360px) {
+  .currentForecast .currentForecast__conditions .temp {
+    font-size: 8rem;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .currentForecast .currentForecast__conditions .temp {
+    font-size: 9rem;
+  }
+}
+.currentForecast .currentForecast__conditions .temp .unit {
+  font-size: 1.65rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-shadow: none;
+  position: absolute;
+  top: 55%;
+  left: 85%;
+}
+@media only screen and (min-width: 768px) {
+  .currentForecast .currentForecast__conditions .temp .unit {
+    left: 75%;
+  }
+}
+.currentForecast .currentForecast__conditions .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: 1/span 1;
+  grid-column: 3/span 2;
+}
+.currentForecast .currentForecast__conditions .icon i {
+  font-size: 3rem;
+  text-shadow: 1px 0 5px #000;
+}
+@media only screen and (min-width: 768px) {
+  .currentForecast .currentForecast__conditions .icon i {
+    font-size: 4rem;
+  }
+}
+.currentForecast .currentForecast__conditions .maxtemp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: 2/span 1;
+  grid-column: 3/span 2;
+}
+.currentForecast .currentForecast__conditions .mintemp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: start;
+  grid-row: 3/span 1;
+  grid-column: 3/span 2;
+  color: rgba(255, 255, 255, 0.6);
+}
+.currentForecast .currentForecast__conditions .desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: 4/span 1;
+  grid-column: 1/span 4;
+  padding-top: 0.5rem;
+}
+@media only screen and (max-width: 1024px) and (max-height: 650px) {
+  .currentForecast .currentForecast__conditions .desc {
+    margin-top: 1.5rem;
+  }
+}
+@media only screen and (min-height: 1080px) {
+  .currentForecast .currentForecast__conditions .desc {
+    margin-top: 1.5rem;
+  }
+}
+.currentForecast .currentForecast__conditions .feels {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: 5/span 1;
+  grid-column: 1/span 4;
+  padding-top: 0.5rem;
+  font-weight: normal;
+}
+.currentForecast .currentForecast__conditions .humidity {
+  display: none;
+  grid-row: 6/span 1;
+  grid-column: 1/span 4;
+  padding-top: 0.5rem;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.6);
+}
+@media only screen and (max-width: 1024px) and (max-height: 700px) {
+  .currentForecast .currentForecast__conditions .humidity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-height: 1080px) {
+  .currentForecast .currentForecast__conditions .humidity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.currentForecast .currentForecast__conditions .wind {
+  display: none;
+  grid-row: 7/span 1;
+  grid-column: 1/span 4;
+  padding-top: 0.5rem;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.6);
+}
+@media only screen and (max-width: 1024px) and (max-height: 700px) {
+  .currentForecast .currentForecast__conditions .wind {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-height: 1080px) {
+  .currentForecast .currentForecast__conditions .wind {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }/*# sourceMappingURL=main.min.css.map */
