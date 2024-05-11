@@ -6,6 +6,9 @@
 
 html {
   background-color: rgba(0, 0, 255, 0.5);
+  background-image: url("../img/clouds.jpg");
+  background-size: cover;
+  background-blend-mode: overlay;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
@@ -279,7 +282,9 @@ hr {
   font-weight: normal;
 }
 .currentForecast .currentForecast__conditions .humidity {
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   grid-row: 6/span 1;
   grid-column: 1/span 4;
   padding-top: 0.5rem;
@@ -301,7 +306,9 @@ hr {
   }
 }
 .currentForecast .currentForecast__conditions .wind {
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   grid-row: 7/span 1;
   grid-column: 1/span 4;
   padding-top: 0.5rem;
@@ -320,5 +327,37 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+.dailyForecast .dailyForecast__title {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .dailyForecast .dailyForecast__title {
+    font-size: 1.3rem;
+  }
+}
+.dailyForecast .dailyForecast__contents {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #fff;
+  padding: 0.5rem 0;
+}
+.dailyForecast .dailyForecast__contents .forecastDay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  align-items: 0.9rem;
+}
+@media only screen and (min-width: 375px) {
+  .dailyForecast .dailyForecast__contents .forecastDay {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=main.min.css.map */
