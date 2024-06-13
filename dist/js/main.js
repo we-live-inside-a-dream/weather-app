@@ -5,6 +5,7 @@ import {
   updateScreenReaderConfirmation,
   displayApiError,
   setPlaceholderText,
+  updateDisplay,
 } from "./domFunctions.js";
 import {
   setLocationObject,
@@ -59,7 +60,7 @@ const geoSuccess = (position) => {
   const myCoordsObj = {
     lat: position.coords.latitude,
     lon: position.coords.longitude,
-    name: `Lat:${position.coords.latitude} Long${position.coords.longitude}`,
+    name: `Lat:${position.coords.latitude}Long:${position.coords.longitude}`,
   };
   setLocationObject(currentLoc, myCoordsObj);
   console.log(currentLoc, "setLocationObj");
@@ -157,5 +158,5 @@ const submitNewLocation = async (event) => {
 const updateDataAndDisplay = async (locationObj) => {
   const weatherJson = await getWeatherFromCoords(locationObj);
   console.log(weatherJson);
-  // if (weatherJson) updateDisplay(weatherJson, locationObj);
+  if (weatherJson) updateDisplay(weatherJson, locationObj);
 };
