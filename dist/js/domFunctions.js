@@ -55,7 +55,7 @@ const updateWeatherLocationHeader = (message) => {
       mapArray[1].indexOf("-") === -1
         ? mapArray[1].slice(0, 11)
         : mapArray[1].slice(0, 12);
-    h1.textContent = `${lat} • ${lon}`;
+    h1.textContent = `${lat} • Long: ${lon}`;
   } else if (message) {
     h1.textContent = message;
   }
