@@ -13,7 +13,7 @@ exports.handler = async (event, context) => {
       statusCode: 200,
       body: JSON.stringify(weatherJson),
     };
-  } catch {
-    return { statusCode: 422, body: error.stack };
+  } catch (err) {
+    return { statusCode: 422, body: err.stack };
   }
 };
