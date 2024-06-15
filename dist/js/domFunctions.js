@@ -36,6 +36,7 @@ const toProperCase = (text) => {
 };
 
 const updateWeatherLocationHeader = (message) => {
+  console.log(message, "message");
   const h1 = document.getElementById("currentForecast__location");
   if (
     message &&
