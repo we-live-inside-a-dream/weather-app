@@ -40,7 +40,7 @@ const updateWeatherLocationHeader = (message) => {
   if (
     message &&
     message.indexOf("Lat:") !== -1 &&
-    message.indexOf("Long:") !== -1
+    message.indexOf("Long") !== -1
   ) {
     const msgArray = message.split(" ");
     const mapArray = msgArray.map((msg) => {
