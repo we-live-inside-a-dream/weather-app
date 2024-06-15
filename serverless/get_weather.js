@@ -1,11 +1,13 @@
-const fetch = require("node-fetch");
+let fetch;
 
-const { WEATHER_API_KEY } = process.env;
+export async function handler(event, context) {
+  if (!fetch) {
+    fetch = (await import("node-fetch")).default;
+  }
 
-exports.handler = async (event, context) => {
   const params = JSON.parse(event.body);
   const { lat, lon, units } = params;
-  const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&units=${units}&appid=${WEATHER_API_KEY}`;
+  const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&units=${units}&appid=${process.env.WEATHER_API_KEY}`;
   try {
     const weatherStream = await fetch(url);
     const weatherJson = await weatherStream.json();
@@ -16,4 +18,4 @@ exports.handler = async (event, context) => {
   } catch (err) {
     return { statusCode: 422, body: err.stack };
   }
-};
+}
