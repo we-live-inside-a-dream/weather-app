@@ -37,19 +37,23 @@ const toProperCase = (text) => {
 
 const updateWeatherLocationHeader = (message) => {
   const h1 = document.getElementById("currentForecast__location");
-  if (message && message.indexOf("Lat:") !== -1 && message.indexOf("Long:") !== -1) {
+  if (
+    message &&
+    message.indexOf("Lat:") !== -1 &&
+    message.indexOf("Long:") !== -1
+  ) {
     const msgArray = message.split(" ");
     const mapArray = msgArray.map((msg) => {
       return msg.replace(":", ": ");
     });
     const lat =
-      mapArray[0] && mapArray[0].indexOf("-") === -1
+      mapArray[0].indexOf("-") === -1
         ? mapArray[0].slice(0, 10)
-        : mapArray[0] && mapArray[0].slice(0, 11);
+        : mapArray[0].slice(0, 11);
     const lon =
-      mapArray[1] && mapArray[1].indexOf("-") === -1
+      mapArray[1].indexOf("-") === -1
         ? mapArray[1].slice(0, 11)
-        : mapArray[1] && mapArray[1].slice(0, 12);
+        : mapArray[1].slice(0, 12);
     h1.textContent = `${lat} • ${lon}`;
   } else if (message) {
     h1.textContent = message;
